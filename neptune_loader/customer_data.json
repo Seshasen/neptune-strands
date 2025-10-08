@@ -1,0 +1,49 @@
+{
+    "nodes": [
+      {
+        "label": "Customer Purchase",
+        "file_name": "customer_purchase",
+        "node_cols": [
+          "CustomerID:string"
+        ],
+        "properties": {
+          "Country_of_Residence": "Country:string",
+          "context_type": "Customer details",
+          "description": "Customer Purchase history Tree",
+          "tree_name": "Customer Purchase history",
+          "effectiveFrom": "20250401120000"
+        }
+      },
+      {
+        "label": "Product Purchased",
+        "file_name": "product_purchased",
+        "node_cols": [
+          "InvoiceNo:string",
+          "StockCode:string"
+        ],
+        "properties": {
+          "description": "Description:string",
+          "context_type": "Product details",
+          "Quantity_Purchased": "Quantity:string",
+          "Invoice_Date": "InvoiceDate:string",
+          "Unit_Price": "UnitPrice:string"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "label": "Purchased",
+        "file_name": "customer_products",
+        "from_cols": [
+          "CustomerID:string"
+        ],
+        "to_cols": [
+          "InvoiceNo:string",
+          "StockCode:string"
+        ],
+        "from_label": "customer_purchase",
+        "to_label": "product_purchased",
+        "properties": {}
+      }
+    ]
+  }

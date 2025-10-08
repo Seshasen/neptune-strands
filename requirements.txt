@@ -1,0 +1,9 @@
+uv
+strands-agents
+strands-agents-tools
+mcp
+icecream
+pandas
+numpy
+langchain-community
+awscurl
