@@ -1,2 +1,2 @@
 # neptune-strands
-Agentic AI system using Neptune
+Agentic AI system using Neptune in Strands Agent
